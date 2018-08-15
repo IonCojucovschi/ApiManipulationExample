@@ -28,7 +28,7 @@ namespace Medici.Repository
             GetAllUsers();
 
         }
-
+        #region Get
         public List<Doctor> GetAllDoctors()
         {
             string responseJsonString = null;
@@ -139,8 +139,9 @@ namespace Medici.Repository
             }
             return programare_dct;
         }
+        #endregion
 
-
+        #region Register
         public void RegisterDoctor(Doctor doctor, Procedura procedura)
         {
             string responseJsonString = null;
@@ -210,8 +211,29 @@ namespace Medici.Repository
 
             }
         }
-    }
+        #endregion
 
+        public void UpdateDayAvailability(AvailableDay newday)
+        {
+            string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.DayAvailabilityUpdate +
+                        newday.id + '.' +
+                        newday.hours_list + '.' + newday.work_hours);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+
+            }
+        }
+    }
+    
+    #region GenericDeserialize
     public class DeserializeData<T> where T: class
     {
         public T DeserializedObject;
@@ -233,4 +255,5 @@ namespace Medici.Repository
         public List<T> data;
         public string text;
     }
+    #endregion
 }

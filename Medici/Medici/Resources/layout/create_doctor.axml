@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Register Doctor"
+            android:gravity="center"
+            android:textColor="#000" />
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Name"
+                android:textColor="#000" />
+            <EditText
+                android:background="@color/design_fab_shadow_mid_color"
+                android:id="@+id/doc_name"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:hint="John" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Surname"
+                android:textColor="#000" />
+            <EditText
+                android:background="@color/design_fab_shadow_mid_color"
+                android:id="@+id/doc_surname"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:hint="Kart" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Login"
+                android:textColor="#000" />
+            <EditText
+                android:background="@color/design_fab_shadow_mid_color"
+                android:id="@+id/doc_login"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:hint="Some@gmail.com" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Password"
+                android:textColor="#000" />
+            <EditText
+                android:background="@color/design_fab_shadow_mid_color"
+                android:id="@+id/doc_password"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:inputType="textPassword" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Repeat Password"
+                android:textColor="#000" />
+            <EditText
+                android:background="@color/design_fab_shadow_mid_color"
+                android:id="@+id/doc_password_repeat"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:inputType="textPassword" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/register_doc"
+                android:layout_height="30dp"
+                android:layout_width="150dp"
+                android:text="Register"
+                android:background="#bbbbbb"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
