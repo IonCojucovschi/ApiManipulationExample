@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#86cece"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+    <Space
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="40" />
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent" />
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/user_Button"
+            android:layout_margin="15dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="User"
+            android:background="#d9005f"
+            android:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/doctor_Button"
+            android:layout_margin="15dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="Doctors"
+            android:background="#d9005f"
+            android:gravity="center" />
+    </LinearLayout>
+    <Space
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent" />
+</LinearLayout>
