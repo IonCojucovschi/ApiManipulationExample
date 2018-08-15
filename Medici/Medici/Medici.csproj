@@ -55,19 +55,23 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddProgramation.cs" />
     <Compile Include="Helpers\UrlConstant.cs" />
-    <Compile Include="MedicLog.cs" />
+    <Compile Include="Pages\MedicLog.cs" />
     <Compile Include="Models\AvailableDay.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Procedura.cs" />
     <Compile Include="Models\Programare.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\RegisterDoctor.cs" />
+    <Compile Include="Pages\RegisterUser.cs" />
     <Compile Include="Repository\ManagerContent.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserLog.cs" />
-    <Compile Include="UserOrMed.cs" />
+    <Compile Include="Pages\UserLog.cs" />
+    <Compile Include="Pages\UserOrMed.cs" />
+    <Compile Include="Pages\ViewProgramation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -121,7 +125,29 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\create_user.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Adapters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\create_doctor.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\add_programation.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\view_programation.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
