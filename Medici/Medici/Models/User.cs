@@ -12,12 +12,13 @@ using Android.Widget;
 
 namespace Medici.Models
 {
-   public class User
+    public class User
     {
         public string name { get; set; }
         public string surname { get; set; }
         public string login { get; set; }
         public string pasword { get; set; }
         public string cellphone { get; set; }
+        public string active { get; set; }
     }
 }
