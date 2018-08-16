@@ -61,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
-                android:text="Clear Data"
+                android:text="Add Programation"
                 android:gravity="center"
                 android:layout_margin="20dp"
                 android:background="#d4aaa8" />

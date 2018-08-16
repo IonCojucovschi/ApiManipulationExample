@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Medici/Pages/User/RegisterUser.cs" Line="64" Column="2" />
+      <File FileName="Medici/Pages/User/AddProgramation.cs" Line="66" Column="33" />
+      <File FileName="Medici/Pages/User/RegisterUser.cs" Line="45" Column="1" />
       <File FileName="Medici/Repository/Services.cs" Line="71" Column="10" />
-      <File FileName="Medici/Pages/User/UserLog.cs" Line="69" Column="94" />
+      <File FileName="Medici/Pages/User/UserLog.cs" Line="74" Column="9" />
+      <File FileName="Medici/Extensions/Extensions.cs" Line="12" Column="45" />
+      <File FileName="Medici/Models/User.cs" Line="23" Column="1" />
+      <File FileName="Medici/Pages/User/HomeUser.cs" Line="1" Column="1" />
+      <File FileName="Medici/Pages/Doctor/HomeDoctor.cs" Line="1" Column="1" />
+      <File FileName="Medici/Pages/Doctor/MedicLog.cs" Line="38" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/UserLog.cs" relfile="Medici/Pages/UserLog.cs" line="48" column="47" />
-      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/User/RegisterUser.cs" relfile="Medici/Pages/User/RegisterUser.cs" line="45" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

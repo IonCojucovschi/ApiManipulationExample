@@ -2,6 +2,120 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:background="#000"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/material_grey_300"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:text="Doctors"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+            <Spinner
+                android:id="@+id/doctors_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/material_grey_300"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:text="Procedure"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+            <Spinner
+                android:id="@+id/procedure_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/material_grey_300"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/select_date"
+                android:gravity="center"
+                android:text="Select Date"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/material_grey_300"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:text="Hour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+            <Spinner
+                android:id="@+id/hour_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/material_grey_300"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/programation_comment"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:hint="Put your comment ..." />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:gravity="center">
+        <TextView
+            android:background="@color/material_deep_teal_200"
+            android:text="Create"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </LinearLayout>
 </LinearLayout>

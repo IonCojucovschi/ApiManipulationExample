@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Medici.Models;
 using Medici.Repository;
+using Medici.Extensions;
 
 namespace Medici
 {
@@ -30,8 +31,22 @@ namespace Medici
             SetContentView(Resource.Layout.login);
             // Create your application here
             FindViews();
+            EventHanedlers();
+        }
+
+
+        public void EventHanedlers()
+        {
             LogIn.Click -= Login_Licked;
             LogIn.Click += Login_Licked;
+            Register.Click -= Register_Click;
+            Register.Click += Register_Click;
+
+        }
+
+        private void Register_Click(object s, EventArgs e)
+        {
+            this.GoPage(typeof(RegisterUser));
         }
 
         private void Login_Licked(object s, EventArgs e)
@@ -43,9 +58,7 @@ namespace Medici
                     Services.LogUser(LoginText.Text, PaswordText.Text);
                     if (Services.LoggedUser != null)
                     {
-                        var intent = new Intent();
-                        intent.SetClass(this, typeof(HomeUser));
-                        StartActivity(intent);
+                        this.GoPage(typeof(HomeUser));
                     }
                 }
                 else
