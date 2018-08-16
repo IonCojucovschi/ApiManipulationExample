@@ -15,6 +15,7 @@ namespace Medici
     [Activity(Label = "RegisterUser")]
     public class RegisterUser : Activity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

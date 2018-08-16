@@ -72,6 +72,8 @@
     <Compile Include="Pages\UserLog.cs" />
     <Compile Include="Pages\UserOrMed.cs" />
     <Compile Include="Pages\ViewProgramation.cs" />
+    <Compile Include="Repository\Services.cs" />
+    <Compile Include="Repository\InternetConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

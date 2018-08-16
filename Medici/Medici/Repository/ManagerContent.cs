@@ -4,6 +4,7 @@ using System.Net;
 using Medici.Helpers;
 using Medici.Models;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace Medici.Repository
 {
@@ -139,6 +140,49 @@ namespace Medici.Repository
             }
             return programare_dct;
         }
+
+        public User GetUserLog(string login, string password)
+        {
+            List<User> loggedUser;
+            string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetUserById + login + '.' + password);
+                    var data = new DeserializeData<ResponseData<User>>(responseJsonString);
+                    loggedUser = data.DeserializedObject.data;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return loggedUser.FirstOrDefault();
+        }
+        public Doctor GetDoctorLog(string login, string password)
+        {
+            List<Doctor> loggedDoctor;
+            string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetUserById + login + '.' + password);
+                    var data = new DeserializeData<ResponseData<Doctor>>(responseJsonString);
+                    loggedDoctor = data.DeserializedObject.data;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return loggedDoctor.FirstOrDefault();
+        }
+
+
+
+
         #endregion
 
         #region Register
@@ -193,7 +237,7 @@ namespace Medici.Repository
 
             }
         }
-        public void RegisterDayAvailability(AvailableDay day,int doctorId)
+        public void RegisterDayAvailability(AvailableDay day, int doctorId)
         {
             string responseJsonString = null;
             using (var httpClient = new WebClient())
@@ -202,7 +246,7 @@ namespace Medici.Repository
                 {
                     responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.DayAvailabilityRegister +
                         day.dayname + '.' +
-                        day.hours_list + '.' + day.work_hours+'.'+doctorId);
+                        day.hours_list + '.' + day.work_hours + '.' + doctorId);
                 }
                 catch (Exception)
                 {
@@ -232,9 +276,9 @@ namespace Medici.Repository
             }
         }
     }
-    
+
     #region GenericDeserialize
-    public class DeserializeData<T> where T: class
+    public class DeserializeData<T> where T : class
     {
         public T DeserializedObject;
 
@@ -245,12 +289,12 @@ namespace Medici.Repository
         public T DeserializeFromJson(string jsonString)
         {
             DeserializedObject = JsonConvert.DeserializeObject<T>(jsonString);
-            return DeserializedObject; 
+            return DeserializedObject;
         }
 
     }
 
-    public class ResponseData<T> where T: class
+    public class ResponseData<T> where T : class
     {
         public List<T> data;
         public string text;

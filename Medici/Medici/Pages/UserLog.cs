@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Medici.Models;
+using Medici.Repository;
 
 namespace Medici
 {
@@ -20,15 +22,37 @@ namespace Medici
         public EditText LoginText;
         public EditText PaswordText;
 
+        private User CurentUser;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.login);
-
             // Create your application here
             FindViews();
+            LogIn.Click -= Login_Licked;
+            LogIn.Click += Login_Licked;
         }
+
+        private void Login_Licked(object s, EventArgs e)
+        {
+            if (LoginText.Text != "" & PaswordText.Text != "")
+            {
+                if (InternetConnection.IsNetConnected())
+                {
+
+                }
+                else
+                {
+                    Toast.MakeText(this, "No internet connection", ToastLength.Short).Show();
+                }
+            }
+            else
+            {
+                Toast.MakeText(this, "Wrong login or password", ToastLength.Short).Show();
+            }
+        }
+
 
         private void FindViews()
         {

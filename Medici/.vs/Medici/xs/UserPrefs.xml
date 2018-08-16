@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Medici/Repository/InternetConnection.cs">
+    <Files>
+      <File FileName="Medici/Repository/Services.cs" Line="51" Column="9" />
+      <File FileName="Medici/Repository/ManagerContent.cs" Line="175" Column="34" />
+      <File FileName="Medici/Models/User.cs" Line="23" Column="1" />
+      <File FileName="Medici/Pages/RegisterUser.cs" Line="20" Column="9" />
+      <File FileName="Medici/Pages/UserLog.cs" Line="34" Column="13" />
+      <File FileName="Medici/Repository/InternetConnection.cs" Line="20" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Repository/InternetConnection.cs" relfile="Medici/Repository/InternetConnection.cs" line="22" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Medici PreferredExecutionTarget="Android.192.168.56.101:5555" />
+</Properties>
