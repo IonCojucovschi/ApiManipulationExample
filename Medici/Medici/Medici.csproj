@@ -138,15 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapters\" />
-    <Folder Include="Pages\User\">
-      <DependentUpon>User</DependentUpon>
-    </Folder>
-    <Folder Include="Pages\Doctor\">
-      <DependentUpon>Doctor</DependentUpon>
-    </Folder>
-    <Folder Include="Extensions\">
-      <DependentUpon>Extensions</DependentUpon>
-    </Folder>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\create_doctor.axml">
@@ -160,6 +151,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\view_programation.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spiner_item.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

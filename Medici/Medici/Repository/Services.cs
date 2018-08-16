@@ -9,6 +9,8 @@ namespace Medici.Repository
         public static ManagerContent _resources;
         public static User CurentUser;
         public static Doctor CurentDoctor;
+        public static List<AvailableDay> availableDays;
+
 
         public static User LoggedUser;
         public static Doctor LoggedDoctor;
@@ -42,6 +44,11 @@ namespace Medici.Repository
         {
             var prg = _resources.GetDoctorProgramations(DctID);
             return prg;
+        }
+        public static List<AvailableDay> GetAvailableDay()
+        {
+             availableDays = _resources.GetAllAvailableDays();
+            return availableDays;
         }
         #endregion
 
