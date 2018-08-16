@@ -7,12 +7,17 @@ namespace Medici.Repository
     public static class Services
     {
         public static ManagerContent _resources;
+        public static User CurentUser;
+        public static Doctor CurentDoctor;
 
+        public static User LoggedUser;
+        public static Doctor LoggedDoctor;
         static Services()
         {
             _resources = new ManagerContent();
         }
 
+        #region GEt Content
         public static List<User> GetAllUsers()
         {
             var users = _resources.GetAllUsers();
@@ -38,17 +43,20 @@ namespace Medici.Repository
             var prg = _resources.GetDoctorProgramations(DctID);
             return prg;
         }
+        #endregion
+
+        #region Login Region
         public static User LogUser(string login, string password)
         {
-            var log = _resources.GetUserLog(login, password);
-            return log;
+            LoggedUser = _resources.GetUserLog(login, password);
+            return LoggedUser;
         }
         public static Doctor LogDoctor(string login, string password)
         {
-            var log = _resources.GetDoctorLog(login, password);
-            return log;
+            LoggedDoctor = _resources.GetDoctorLog(login, password);
+            return LoggedDoctor;
         }
-
+        #endregion
 
     }
 }
