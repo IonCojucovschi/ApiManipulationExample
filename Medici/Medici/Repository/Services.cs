@@ -58,5 +58,17 @@ namespace Medici.Repository
         }
         #endregion
 
+        #region register
+        public static void RegisterUser(User user)
+        {
+            _resources.RegisterUser(user);
+            CurentUser = user;
+        }
+        public static void RegisterDoctor(Doctor dct, Procedura procedura)
+        {
+            _resources.RegisterDoctor(dct, procedura);
+            CurentDoctor = dct;
+        }
+        #endregion
     }
 }
