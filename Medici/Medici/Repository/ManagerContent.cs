@@ -168,7 +168,7 @@ namespace Medici.Repository
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetUserById + login + '.' + password);
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetDoctorById + login + '.' + password);
                     var data = new DeserializeData<ResponseData<Doctor>>(responseJsonString);
                     loggedDoctor = data.DeserializedObject.data;
                 }
