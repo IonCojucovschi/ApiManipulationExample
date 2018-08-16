@@ -73,8 +73,9 @@
     <Compile Include="Pages\Doctor\RegisterDoctor.cs" />
     <Compile Include="Pages\Doctor\MedicLog.cs" />
     <Compile Include="Pages\User\UserLog.cs" />
-    <Compile Include="Pages\User\RegisterUser.cs" />
     <Compile Include="Pages\Doctor\ViewProgramation.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Pages\User\RegisterUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -142,6 +143,9 @@
     </Folder>
     <Folder Include="Pages\Doctor\">
       <DependentUpon>Doctor</DependentUpon>
+    </Folder>
+    <Folder Include="Extensions\">
+      <DependentUpon>Extensions</DependentUpon>
     </Folder>
   </ItemGroup>
   <ItemGroup>

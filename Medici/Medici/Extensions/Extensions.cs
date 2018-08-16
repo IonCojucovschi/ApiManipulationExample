@@ -1,10 +1,16 @@
 ﻿using System;
+using Android.App;
+using Android.Content;
+
 namespace Medici.Extensions
 {
-    public class EmptyClass
+    public static class Extensions
     {
-        public EmptyClass()
+        public static void GoPage(this Activity activity, Activity name)
         {
+            var intent = new Intent();
+            intent.SetClass(activity, name.GetType());
+            activity.StartActivity(intent);
         }
     }
 }
