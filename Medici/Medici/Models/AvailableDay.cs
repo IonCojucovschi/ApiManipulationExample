@@ -12,11 +12,11 @@ using Android.Widget;
 
 namespace Medici.Models
 {
-    public class AvailableDay:Entity
+    public class AvailableDay : Entity
     {
         public string dayname { get; set; }
         public string hours_list { get; set; }
-        public string work_hours { get; set; }
+        public int work_hours { get; set; }
         public string doctor_id { get; set; }
     }
 }

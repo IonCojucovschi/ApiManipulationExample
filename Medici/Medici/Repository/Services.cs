@@ -9,8 +9,12 @@ namespace Medici.Repository
         public static ManagerContent _resources;
         public static User CurentUser;
         public static Doctor CurentDoctor;
-        public static List<AvailableDay> availableDays;
 
+        public static List<Doctor> AllDoctorsList;
+        public static List<User> AllUserList;
+        public static List<AvailableDay> AllAvailableDayLilst;
+        public static List<Procedura> AllProcedureList;
+        public static List<int[]> idProcedureIdDoctList;/// idTouple,idProcedure,idDct
 
         public static User LoggedUser;
         public static Doctor LoggedDoctor;
@@ -27,13 +31,13 @@ namespace Medici.Repository
         }
         public static List<Doctor> GetAllDoctors()
         {
-            var dct = _resources.GetAllDoctors();
-            return dct;
+            AllDoctorsList = _resources.GetAllDoctors();
+            return AllDoctorsList;
         }
         public static List<Procedura> GetAllProcedure()
         {
-            var prc = _resources.GetAllProcedure();
-            return prc;
+            AllProcedureList = _resources.GetAllProcedure();
+            return AllProcedureList;
         }
         public static List<Programare> GetAllProgramation()
         {
@@ -47,8 +51,8 @@ namespace Medici.Repository
         }
         public static List<AvailableDay> GetAvailableDay()
         {
-             availableDays = _resources.GetAllAvailableDays();
-            return availableDays;
+            AllAvailableDayLilst = _resources.GetAllAvailableDays();
+            return AllAvailableDayLilst;
         }
         #endregion
 
@@ -76,6 +80,25 @@ namespace Medici.Repository
             _resources.RegisterDoctor(dct, procedura);
             CurentDoctor = dct;
         }
+        public static void RegisterProgramation(Programare procedura)
+        {
+            _resources.RegisterProgramation(procedura);
+        }
+
+        public static void RegisterDayAvailability(AvailableDay day)
+        {
+            _resources.RegisterDayAvailability(day);
+        }
+
+
         #endregion
+
+        #region Update 
+        public static void UpdateDayAvailability(AvailableDay day)
+        {
+            _resources.UpdateDayAvailability(day);
+        }
+        #endregion
+
     }
 }

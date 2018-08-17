@@ -14,7 +14,7 @@ namespace Medici.Helpers
 {
     public static class UrlConstant
     {
-        public static string BaseUrl= "http://readabook.16mb.com/doctori";
+        public static string BaseUrl = "http://readabook.16mb.com/doctori";
 
         /// get all data 
         public static string GetAllDoctors = "/doctori/all/s";
@@ -32,7 +32,7 @@ namespace Medici.Helpers
         public static string RegisterDoctor = "/doctori/register/";
         public static string RegisterUser = "/user/register/";
         public static string RegisterProcedure = "/procedure/register/";
-        public static string RegisterProgramation = "/programari/register";
+        public static string RegisterProgramation = "/programari/register/";
         public static string DayAvailabilityRegister = "/dayavailable/register/";
 
         /// update data 

@@ -18,7 +18,7 @@ namespace Medici
     public class MedicLog : Activity
     {
         public TextView LogIn;
-        public  TextView Register;
+        public TextView Register;
         public EditText LoginText;
         public EditText PaswordText;
 
@@ -64,6 +64,10 @@ namespace Medici
                     if (Services.LoggedDoctor != null)
                     {
                         this.GoPage(typeof(HomeDoctor));
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Login or password is incorect", ToastLength.Short).Show();
                     }
                 }
                 else

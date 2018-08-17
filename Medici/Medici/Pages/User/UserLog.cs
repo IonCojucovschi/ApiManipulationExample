@@ -60,6 +60,10 @@ namespace Medici
                     {
                         this.GoPage(typeof(HomeUser));
                     }
+                    else
+                    {
+                        Toast.MakeText(this, "Login or password is incorect", ToastLength.Short).Show();
+                    }
                 }
                 else
                 {

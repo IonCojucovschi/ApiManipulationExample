@@ -237,7 +237,7 @@ namespace Medici.Repository
 
             }
         }
-        public void RegisterDayAvailability(AvailableDay day, int doctorId)
+        public void RegisterDayAvailability(AvailableDay day)
         {
             string responseJsonString = null;
             using (var httpClient = new WebClient())
@@ -246,7 +246,7 @@ namespace Medici.Repository
                 {
                     responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.DayAvailabilityRegister +
                         day.dayname + '.' +
-                        day.hours_list + '.' + day.work_hours + '.' + doctorId);
+                                                                   day.hours_list + '.' + day.work_hours + '.' + day.doctor_id);
                 }
                 catch (Exception)
                 {
@@ -255,6 +255,31 @@ namespace Medici.Repository
 
             }
         }
+        public void RegisterProgramation(Programare programare)
+        {
+            string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProgramation +
+                                                                    programare.id_doctor + '.' +
+                                                                    programare.id_user + '.' +
+                                                                    programare.prog_name + '.' +
+                                                                    programare.hour + '.' +
+                                                                    programare.comments + '.' +
+                                                                    programare.id_procedure);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+
+            }
+        }
+
+
+
         #endregion
 
         public void UpdateDayAvailability(AvailableDay newday)

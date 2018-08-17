@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Medici.Models
 {
-    public class User
+    public class User : Entity
     {
         public string name { get; set; }
         public string surname { get; set; }
