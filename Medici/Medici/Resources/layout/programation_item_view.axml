@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#bbbbbb"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:weightSum="100">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="40"
+        android:id="@+id/name_proc"
+        android:gravity="center"
+        android:textColor="#@color/material_grey_900"
+        android:text="Name Family" />
+    <TextView
+        android:textColor="#@color/material_grey_900"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="30"
+        android:id="@+id/day_proc"
+        android:gravity="center"
+        android:text="date" />
+    <TextView
+        android:textColor="#@color/material_grey_900"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="30"
+        android:id="@+id/hour_proc"
+        android:gravity="center"
+        android:text="8" />
+</LinearLayout>

@@ -77,6 +77,8 @@
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Pages\User\RegisterUser.cs" />
     <Compile Include="Models\RelationProcedureDoctor.cs" />
+    <Compile Include="Pages\Doctor\ProgramationDoctor.cs" />
+    <Compile Include="Pages\User\ProgramationUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -115,6 +117,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\layout\home_user.axml" />
     <AndroidResource Include="Resources\layout\home_doctor.axml" />
+    <AndroidResource Include="Resources\layout\programation_item_view.axml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">

@@ -2396,8 +2396,8 @@ namespace Medici
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800cf
-			public const int action_settings = 2131230927;
+			// aapt resource value: 0x7f0800d0
+			public const int action_settings = 2131230928;
 			
 			// aapt resource value: 0x7f0800b9
 			public const int action_text = 2131230905;
@@ -2633,8 +2633,8 @@ namespace Medici
 			// aapt resource value: 0x7f0800b3
 			public const int login_content = 2131230899;
 			
-			// aapt resource value: 0x7f0800ce
-			public const int masked = 2131230926;
+			// aapt resource value: 0x7f0800cf
+			public const int masked = 2131230927;
 			
 			// aapt resource value: 0x7f0800bd
 			public const int media_actions = 2131230909;
@@ -2689,6 +2689,9 @@ namespace Medici
 			
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
+			
+			// aapt resource value: 0x7f0800cd
+			public const int procedureView = 2131230925;
 			
 			// aapt resource value: 0x7f08008e
 			public const int procedure_spinner = 2131230862;
@@ -2942,8 +2945,8 @@ namespace Medici
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800cd
-			public const int visible = 2131230925;
+			// aapt resource value: 0x7f0800ce
+			public const int visible = 2131230926;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3197,25 +3200,28 @@ namespace Medici
 			public const int notification_template_part_time = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_item_material = 2130968639;
+			public const int programation_item_view = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int select_dialog_multichoice_material = 2130968640;
+			public const int select_dialog_item_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int select_dialog_singlechoice_material = 2130968641;
+			public const int select_dialog_multichoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int support_simple_spinner_dropdown_item = 2130968642;
+			public const int select_dialog_singlechoice_material = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int tooltip = 2130968643;
+			public const int support_simple_spinner_dropdown_item = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int user_or_medic = 2130968644;
+			public const int tooltip = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int view_programation = 2130968645;
+			public const int user_or_medic = 2130968645;
+			
+			// aapt resource value: 0x7f040046
+			public const int view_programation = 2130968646;
 			
 			static Layout()
 			{
