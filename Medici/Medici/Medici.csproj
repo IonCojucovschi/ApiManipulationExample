@@ -79,6 +79,8 @@
     <Compile Include="Models\RelationProcedureDoctor.cs" />
     <Compile Include="Pages\Doctor\ProgramationDoctor.cs" />
     <Compile Include="Pages\User\ProgramationUser.cs" />
+    <Compile Include="Adapters\ProcedureUserAdapter.cs" />
+    <Compile Include="Models\AdapterHelpers\ProcedureModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -142,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapters\" />
+    <Folder Include="Models\AdapterHelpers\">
+      <DependentUpon>AdapterHelpers</DependentUpon>
+    </Folder>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\create_doctor.axml">

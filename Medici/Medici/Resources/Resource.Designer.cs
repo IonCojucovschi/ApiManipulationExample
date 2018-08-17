@@ -2396,8 +2396,8 @@ namespace Medici
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800d0
-			public const int action_settings = 2131230928;
+			// aapt resource value: 0x7f0800d3
+			public const int action_settings = 2131230931;
 			
 			// aapt resource value: 0x7f0800b9
 			public const int action_text = 2131230905;
@@ -2486,6 +2486,9 @@ namespace Medici
 			// aapt resource value: 0x7f08006c
 			public const int customPanel = 2131230828;
 			
+			// aapt resource value: 0x7f0800cb
+			public const int day_proc = 2131230923;
+			
 			// aapt resource value: 0x7f08007a
 			public const int decor_content_parent = 2131230842;
 			
@@ -2525,8 +2528,8 @@ namespace Medici
 			// aapt resource value: 0x7f080094
 			public const int doc_surname = 2131230868;
 			
-			// aapt resource value: 0x7f0800cc
-			public const int doctor_Button = 2131230924;
+			// aapt resource value: 0x7f0800cf
+			public const int doctor_Button = 2131230927;
 			
 			// aapt resource value: 0x7f08008d
 			public const int doctors_spinner = 2131230861;
@@ -2588,6 +2591,9 @@ namespace Medici
 			// aapt resource value: 0x7f080021
 			public const int homeAsUp = 2131230753;
 			
+			// aapt resource value: 0x7f0800cc
+			public const int hour_proc = 2131230924;
+			
 			// aapt resource value: 0x7f080090
 			public const int hour_spinner = 2131230864;
 			
@@ -2633,14 +2639,14 @@ namespace Medici
 			// aapt resource value: 0x7f0800b3
 			public const int login_content = 2131230899;
 			
-			// aapt resource value: 0x7f0800cf
-			public const int masked = 2131230927;
+			// aapt resource value: 0x7f0800d2
+			public const int masked = 2131230930;
 			
 			// aapt resource value: 0x7f0800bd
 			public const int media_actions = 2131230909;
 			
-			// aapt resource value: 0x7f0800ca
-			public const int message = 2131230922;
+			// aapt resource value: 0x7f0800cd
+			public const int message = 2131230925;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2650,6 +2656,9 @@ namespace Medici
 			
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int name_proc = 2131230922;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int navigation_header_container = 2131230888;
@@ -2690,8 +2699,8 @@ namespace Medici
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
 			
-			// aapt resource value: 0x7f0800cd
-			public const int procedureView = 2131230925;
+			// aapt resource value: 0x7f0800d0
+			public const int procedureView = 2131230928;
 			
 			// aapt resource value: 0x7f08008e
 			public const int procedure_spinner = 2131230862;
@@ -2921,8 +2930,8 @@ namespace Medici
 			// aapt resource value: 0x7f080026
 			public const int useLogo = 2131230758;
 			
-			// aapt resource value: 0x7f0800cb
-			public const int user_Button = 2131230923;
+			// aapt resource value: 0x7f0800ce
+			public const int user_Button = 2131230926;
 			
 			// aapt resource value: 0x7f08009b
 			public const int user_login = 2131230875;
@@ -2945,8 +2954,8 @@ namespace Medici
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800ce
-			public const int visible = 2131230926;
+			// aapt resource value: 0x7f0800d1
+			public const int visible = 2131230929;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

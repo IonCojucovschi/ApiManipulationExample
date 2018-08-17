@@ -12,6 +12,8 @@
         android:text="Your programation" />
     <ListView
         android:id="@+id/procedureView"
+        android:divider="@color/material_grey_800"
+        android:dividerHeight="4dp"
         android:layout_height="0dp"
         android:layout_weight="100"
         android:layout_width="match_parent" />

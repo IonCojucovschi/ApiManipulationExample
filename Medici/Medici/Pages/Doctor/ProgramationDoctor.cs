@@ -16,11 +16,21 @@ namespace Medici
     [Activity(Label = "ProgramationDoctor")]
     public class ProgramationDoctor : Activity
     {
+        ListView listView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            SetContentView(Resource.Layout.view_programation);
             // Create your application here
+            FindViews();
         }
+
+        private void FindViews()
+        {
+            listView = FindViewById<ListView>(Resource.Id.procedureView);
+        }
+
+
+
     }
 }

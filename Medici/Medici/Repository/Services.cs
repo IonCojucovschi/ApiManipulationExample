@@ -14,6 +14,7 @@ namespace Medici.Repository
         public static List<User> AllUserList;
         public static List<AvailableDay> AllAvailableDayLilst;
         public static List<Procedura> AllProcedureList;
+        public static List<Programare> AllProgramationList;
         public static List<RelationProcedureDoctor> AllProcedureDocRelationsList;
 
         public static User LoggedUser;
@@ -43,8 +44,8 @@ namespace Medici.Repository
         }
         public static List<Programare> GetAllProgramation()
         {
-            var prg = _resources.GetAllProgramation();
-            return prg;
+            AllProgramationList = _resources.GetAllProgramation();
+            return AllProgramationList;
         }
         public static List<Programare> GetAllDoctorProgramation(int DctID)
         {

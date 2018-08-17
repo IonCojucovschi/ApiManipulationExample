@@ -18,6 +18,7 @@ namespace Medici
     [Activity(Label = "HomeUser")]
     public class HomeUser : Activity
     {
+
         TextView HelloContent;
         TextView Doctors;
         TextView Programation;
@@ -47,11 +48,19 @@ namespace Medici
         {
             CreateProgramation.Click -= CreateClick;
             CreateProgramation.Click += CreateClick;
+            Programation.Click -= Programation_Click;
+            Programation.Click += Programation_Click;
+
         }
 
         private void CreateClick(object s, EventArgs e)
         {
             this.GoPage(typeof(AddProgramation));
         }
+        void Programation_Click(object sender, EventArgs e)
+        {
+            this.GoPage(typeof(ProgramationUser));
+        }
+
     }
 }

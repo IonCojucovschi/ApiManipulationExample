@@ -146,6 +146,7 @@ namespace Medici
                         doctor_id = selectedDoctor.id.ToString()
                     };
                     Services.RegisterDayAvailability(dday);
+                    this.OnBackPressed();
                 }
                 else
                 {
@@ -154,6 +155,7 @@ namespace Medici
                         selectedDay.hours_list += programareaCurenta.hour + ",";
                         selectedDay.work_hours++;
                         Services.UpdateDayAvailability(selectedDay);
+                        Services.RegisterProgramation(programareaCurenta);
                         //this.GoPage(typeof(HomeUser));
                         this.OnBackPressed();
                     }
