@@ -50,9 +50,14 @@ namespace Medici
             CreateProgramation.Click += CreateClick;
             Programation.Click -= Programation_Click;
             Programation.Click += Programation_Click;
+            Doctors.Click -= Doctor_ButtonClick;
+            Doctors.Click += Doctor_ButtonClick;
 
         }
-
+        private void Doctor_ButtonClick(object s, EventArgs  e)
+        {
+            this.GoPage(typeof(DoctorsListView));
+        }
         private void CreateClick(object s, EventArgs e)
         {
             this.GoPage(typeof(AddProgramation));

@@ -29,8 +29,8 @@ namespace Medici.Repository
         #region GEt Content
         public static List<User> GetAllUsers()
         {
-            var users = _resources.GetAllUsers();
-            return users;
+            AllUserList = _resources.GetAllUsers();
+            return AllUserList;
         }
         public static List<Doctor> GetAllDoctors()
         {

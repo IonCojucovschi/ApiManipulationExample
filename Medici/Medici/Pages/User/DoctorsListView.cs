@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Medici.Adapters;
-using Medici.Models;
 using Medici.Models.AdapterHelpers;
 using Medici.Repository;
 
 namespace Medici
 {
-    [Activity(Label = "ProgramationDoctor")]
-    public class ProgramationDoctor : Activity
+    [Activity(Label = "DoctorsListView")]
+    public class DoctorsListView : Activity
     {
         ListView listView;
+        TextView titleText; 
         List<ProcedureModel> procedures = new List<ProcedureModel>();
 
 
@@ -31,6 +30,8 @@ namespace Medici
             // Create your application here
             FindViews();
             InitializeProcedure();
+
+            titleText.Text = "Doctor's list";
             ProcedureUserAdapter adapter = new ProcedureUserAdapter(this, procedures);
             listView.Adapter = adapter;
         }
@@ -38,27 +39,22 @@ namespace Medici
         private void FindViews()
         {
             listView = FindViewById<ListView>(Resource.Id.procedureView);
+            titleText = FindViewById<TextView>(Resource.Id.title_text);
         }
         private void InitializeProcedure()
         {
-            Services.GetAllUsers();
-            Services.GetAllProgramation();
-            List<Programare> proceduresUser = Services.AllProgramationList.Where(itm => itm.id_doctor == Services.LoggedDoctor.id.ToString()).ToList();
-            foreach (var item in proceduresUser)
+            Services.GetAllDoctors();
+            foreach (var item in Services.AllDoctorsList)
             {
-                string temp = GetPacientName(item.id_user);
-                procedures.Add(new ProcedureModel() { name = temp, date = item.prog_name, hour = item.hour });
+                procedures.Add(new ProcedureModel() { name = item.name, date = item.surname, hour ="" });
             }
 
             //Services.LoggedUser.name
         }
-        private string GetPacientName(string id)
+        private string GetDoctorName(string id)
         {
-            string dctname = Services.AllUserList.Where(itm => itm.id.ToString() == id).Select(itm => itm.name + " " + itm.surname).ToList().FirstOrDefault();
+            string dctname = Services.AllDoctorsList.Where(itm => itm.id.ToString() == id).Select(itm => itm.name + " " + itm.surname).ToList().FirstOrDefault();
             return dctname;
         }
-
-
-
     }
 }

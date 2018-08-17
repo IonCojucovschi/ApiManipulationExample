@@ -31,11 +31,11 @@
             android:weightSum="100"
             android:layout_weight="50">
             <TextView
-                android:id="@+id/pacient_view"
+                android:id="@+id/doctor_view"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
-                android:text="View Pacients"
+                android:text="All Doctors"
                 android:gravity="center"
                 android:layout_margin="20dp"
                 android:background="#d4aaa8" />
@@ -57,11 +57,11 @@
             android:gravity="center"
             android:layout_weight="50">
             <TextView
-                android:id="@+id/clear_data"
+                android:id="@+id/add_procedure"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
-                android:text="Clear Data"
+                android:text="Add new procedure"
                 android:gravity="center"
                 android:layout_margin="20dp"
                 android:background="#d4aaa8" />
