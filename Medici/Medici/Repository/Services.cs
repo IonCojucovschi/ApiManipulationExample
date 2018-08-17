@@ -14,13 +14,15 @@ namespace Medici.Repository
         public static List<User> AllUserList;
         public static List<AvailableDay> AllAvailableDayLilst;
         public static List<Procedura> AllProcedureList;
-        public static List<int[]> idProcedureIdDoctList;/// idTouple,idProcedure,idDct
+        public static List<RelationProcedureDoctor> AllProcedureDocRelationsList;
 
         public static User LoggedUser;
         public static Doctor LoggedDoctor;
         static Services()
         {
             _resources = new ManagerContent();
+            GetAllProcedure();
+            GetAllProcedureDocrelation();
         }
 
         #region GEt Content
@@ -54,6 +56,14 @@ namespace Medici.Repository
             AllAvailableDayLilst = _resources.GetAllAvailableDays();
             return AllAvailableDayLilst;
         }
+        public static List<RelationProcedureDoctor> GetAllProcedureDocrelation()
+        {
+            AllProcedureDocRelationsList = _resources.GetAllProcedureDocRelations();
+            return AllProcedureDocRelationsList;
+        }
+
+
+
         #endregion
 
         #region Login Region

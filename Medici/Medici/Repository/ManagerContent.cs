@@ -180,6 +180,25 @@ namespace Medici.Repository
             return loggedDoctor.FirstOrDefault();
         }
 
+        public List<RelationProcedureDoctor> GetAllProcedureDocRelations()
+        {
+            List<RelationProcedureDoctor> relations;
+            string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetAllProcedureDocRelation);
+                    var data = new DeserializeData<ResponseData<RelationProcedureDoctor>>(responseJsonString);
+                    relations = data.DeserializedObject.data;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return relations;
+        }
 
 
 
@@ -291,7 +310,7 @@ namespace Medici.Repository
                 {
                     responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.DayAvailabilityUpdate +
                         newday.id + '.' +
-                        newday.hours_list + '.' + newday.work_hours);
+                                                                   newday.hours_list + '.' + newday.work_hours);// + '.' + newday.doctor_id
                 }
                 catch (Exception)
                 {

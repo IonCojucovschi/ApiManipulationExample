@@ -22,6 +22,7 @@ namespace Medici.Helpers
         public static string GetAllProcedure = "/procedure/all/s";
         public static string GetAllProgramation = "/programari/all/s";
         public static string GetAllAvailableDay = "/dayavailable/all/s";
+        public static string GetAllProcedureDocRelation = "/procedure_doctor/all/s";
 
         /// get data byId 
         public static string GetUserById = "/user/getbyid/";
@@ -34,6 +35,7 @@ namespace Medici.Helpers
         public static string RegisterProcedure = "/procedure/register/";
         public static string RegisterProgramation = "/programari/register/";
         public static string DayAvailabilityRegister = "/dayavailable/register/";
+        public static string RegisterProcedureDocRelation = "/procedure_doctor/register/";
 
         /// update data 
         public static string DayAvailabilityUpdate = "/dayavailable/update/";

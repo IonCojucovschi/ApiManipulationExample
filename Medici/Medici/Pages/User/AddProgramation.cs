@@ -68,16 +68,19 @@ namespace Medici
             var doctor = Services.GetAllDoctors().Select(item => item.name + " " + item.surname).ToList(); ;
             ArrayAdapter adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, doctor);
             doctorsSpin.Adapter = adapter;
+            doctorsSpin.ItemSelected -= new EventHandler<AdapterView.ItemSelectedEventArgs>(doctor_spiner_ItemSelected);
             doctorsSpin.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(doctor_spiner_ItemSelected);
 
             var procedure = Services.GetAllProcedure().Select(item => item.name).ToList();
             ArrayAdapter procedure_adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, procedure);
             procedureSpin.Adapter = procedure_adapter;
+            procedureSpin.ItemSelected -= new EventHandler<AdapterView.ItemSelectedEventArgs>(procedure_spiner_ItemSelected);
             procedureSpin.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(procedure_spiner_ItemSelected);
 
 
             ArrayAdapter hours_adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, hours);
             hourSpin.Adapter = hours_adapter;
+            hourSpin.ItemSelected -= new EventHandler<AdapterView.ItemSelectedEventArgs>(hours_spiner_ItemSelected);
             hourSpin.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(hours_spiner_ItemSelected);
 
 
@@ -90,11 +93,21 @@ namespace Medici
             programareaCurenta.id_doctor = selectedDoctor.id.ToString();
             avaylableDays = Services.GetAvailableDay();
 
+            var relationProcDoc = Services.AllProcedureDocRelationsList.Where(itm => itm.doc_id == selectedDoctor.id).Select(itm => itm.proc_id);
+            var docProcedures = Services.GetAllProcedure().Where(item => relationProcDoc.Contains(item.id));
+            List<string> availableProcedures = new List<string>();
 
+            foreach (var item in docProcedures)
+            {
+                availableProcedures.Add(item.name);
+            }
+
+            ArrayAdapter procedure_adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, availableProcedures);
+            procedureSpin.Adapter = procedure_adapter;
         }
         private void procedure_spiner_ItemSelected(object s, AdapterView.ItemSelectedEventArgs e)
         {
-            Procedura prc = Services.GetAllProcedure().Where(itm => itm.name == procedureSpin.GetItemAtPosition(e.Position).ToString()).FirstOrDefault();
+            Procedura prc = Services.AllProcedureList.Where(itm => itm.name == procedureSpin.GetItemAtPosition(e.Position).ToString()).FirstOrDefault();
             programareaCurenta.id_procedure = prc.id.ToString();
         }
         private void hours_spiner_ItemSelected(object s, AdapterView.ItemSelectedEventArgs e)
@@ -121,7 +134,7 @@ namespace Medici
                 programareaCurenta.id_procedure != "" & programareaCurenta.hour != ""
                 & programareaCurenta.id_user != "" & programareaCurenta.comments != "")
             {
-                AvailableDay day = Services.AllAvailableDayLilst.Where(itm => itm.dayname == programareaCurenta.prog_name).FirstOrDefault();
+                AvailableDay day = Services.AllAvailableDayLilst.Where(itm => itm.dayname == programareaCurenta.prog_name & itm.doctor_id == selectedDoctor.id.ToString()).FirstOrDefault();
                 if (day == null)
                 {
                     Services.RegisterProgramation(programareaCurenta);
@@ -141,7 +154,8 @@ namespace Medici
                         selectedDay.hours_list += programareaCurenta.hour + ",";
                         selectedDay.work_hours++;
                         Services.UpdateDayAvailability(selectedDay);
-                        this.GoPage(typeof(HomeUser));
+                        //this.GoPage(typeof(HomeUser));
+                        this.OnBackPressed();
                     }
                     else
                     {
@@ -156,7 +170,11 @@ namespace Medici
 
         }
 
-
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            Finish();
+        }
 
 
 
@@ -181,7 +199,7 @@ namespace Medici
             programareaCurenta.prog_name = day + "" + month + "" + year;
             avaylableDays = Services.GetAvailableDay();
             selectDate.Text = "Selected date: " + day + "/" + month + "/" + year;
-            selectedDay = Services.AllAvailableDayLilst.Where(itm => itm.dayname == programareaCurenta.prog_name).FirstOrDefault();
+            selectedDay = Services.AllAvailableDayLilst.Where(itm => itm.dayname == programareaCurenta.prog_name & itm.doctor_id == selectedDoctor.id.ToString()).FirstOrDefault();
 
             if (selectedDay != null)
             {
@@ -197,6 +215,11 @@ namespace Medici
                 }
 
                 ArrayAdapter hours_adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, unUsedHoursList);
+                hourSpin.Adapter = hours_adapter;
+            }
+            else
+            {
+                ArrayAdapter hours_adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, hours);
                 hourSpin.Adapter = hours_adapter;
             }
 

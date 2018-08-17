@@ -11,13 +11,14 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Medici.Extensions;
+using Medici.Repository;
 
 namespace Medici
 {
     [Activity(Label = "HomeUser")]
     public class HomeUser : Activity
     {
-
+        TextView HelloContent;
         TextView Doctors;
         TextView Programation;
         TextView CreateProgramation;
@@ -33,8 +34,14 @@ namespace Medici
         private void FindViews()
         {
             Doctors = FindViewById<TextView>(Resource.Id.doctors_view);
+            HelloContent = FindViewById<TextView>(Resource.Id.hello_text);
             Programation = FindViewById<TextView>(Resource.Id.programation_view);
             CreateProgramation = FindViewById<TextView>(Resource.Id.clear_data);
+
+
+
+            HelloContent.Text = "Hello, " + Services.LoggedUser.name + " !";
+
         }
         private void HandleViews()
         {

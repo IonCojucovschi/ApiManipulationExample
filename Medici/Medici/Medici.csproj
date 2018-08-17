@@ -76,6 +76,7 @@
     <Compile Include="Pages\Doctor\ViewProgramation.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Pages\User\RegisterUser.cs" />
+    <Compile Include="Models\RelationProcedureDoctor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
