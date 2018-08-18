@@ -240,14 +240,14 @@ namespace Medici.Repository
             }
 
         }
-        public void RegisterProcedure(Procedura procedura)
+        public void RegisterProcedure(string procedura)
         {
             string responseJsonString = null;
             using (var httpClient = new WebClient())
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProcedure + procedura.name);
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProcedure + procedura);
                 }
                 catch (Exception)
                 {
@@ -297,6 +297,24 @@ namespace Medici.Repository
             }
         }
 
+        public void REgisterDoc_ProcedRelation(int proc_id,int doc_id)
+        {
+            
+                 string responseJsonString = null;
+            using (var httpClient = new WebClient())
+            {
+                try
+                {
+                    //proc_id.doc_id
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProcedureDocRelation+proc_id+'.'+doc_id);
+                }
+                catch (Exception)
+                {
+                    ///throw;
+                }
+
+            }
+        }
 
 
         #endregion
