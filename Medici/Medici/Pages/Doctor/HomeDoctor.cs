@@ -51,7 +51,7 @@ namespace Medici
         }
         private void AddProcedure_clicked(object s,EventArgs e)
         {
-
+            this.GoPage(typeof(AddProcedure));
         }
         private void ProgramationView_Click(object s, EventArgs e)
         {

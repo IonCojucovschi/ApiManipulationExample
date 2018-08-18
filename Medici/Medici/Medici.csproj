@@ -61,6 +61,7 @@
     <Compile Include="Models\Procedura.cs" />
     <Compile Include="Models\Programare.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\Doctor\AddProcedure.cs" />
     <Compile Include="Pages\User\DoctorsListView.cs" />
     <Compile Include="Repository\ManagerContent.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -143,7 +144,11 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\expanded_item_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\create_doctor.axml">
       <SubType>Designer</SubType>
@@ -156,6 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\view_programation.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\add_procedure.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -48,7 +48,7 @@ namespace Medici
             foreach (var item in proceduresUser)
             {
                 string temp = GetDoctorName(item.id_doctor);
-                procedures.Add(new ProcedureModel() { name = temp, date = item.prog_name, hour = item.hour });
+                procedures.Add(new ProcedureModel() { name = temp, date = item.prog_name,isExpanded=false,coment="", hour = item.hour });
             }
 
             //Services.LoggedUser.name

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Medici.Extensions;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -53,11 +53,20 @@ namespace Medici.Adapters
 
             if (convertView == null)
             {
-                convertView = context.LayoutInflater.Inflate(Resource.Layout.programation_item_view, null);
+                if (!item.isExpanded)
+                {
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.programation_item_view, null);
+                }
+                else
+                {
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.expanded_item_view, null);
+                }
             }
+            
             convertView.FindViewById<TextView>(Resource.Id.name_proc).Text = item.name;
-            convertView.FindViewById<TextView>(Resource.Id.day_proc).Text = item.date;
+            convertView.FindViewById<TextView>(Resource.Id.day_proc).Text = item.date.DateFormatter();
             convertView.FindViewById<TextView>(Resource.Id.hour_proc).Text = item.hour;
+            convertView.FindViewById<TextView>(Resource.Id.comment_content_proc).Text =item.isExpanded ? item.coment.Replace("%20", " ") : "";
             return convertView;
         }
     }

@@ -46,7 +46,7 @@ namespace Medici
             Services.GetAllDoctors();
             foreach (var item in Services.AllDoctorsList)
             {
-                procedures.Add(new ProcedureModel() { name = item.name, date = item.surname, hour ="" });
+                procedures.Add(new ProcedureModel() { name = item.name+"  "+item.surname, date ="", hour ="" });
             }
 
             //Services.LoggedUser.name

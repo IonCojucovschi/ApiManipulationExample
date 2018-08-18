@@ -61,7 +61,7 @@ namespace Medici.Repository
                 }
                 catch (Exception)
                 {
-                    throw;
+                    ///throw;
                 }
             }
             return users;
@@ -98,7 +98,7 @@ namespace Medici.Repository
                 }
                 catch (Exception)
                 {
-                    throw;
+                    ///throw;
                 }
             }
 

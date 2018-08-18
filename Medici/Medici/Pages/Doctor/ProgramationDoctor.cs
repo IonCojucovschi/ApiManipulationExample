@@ -33,6 +33,25 @@ namespace Medici
             InitializeProcedure();
             ProcedureUserAdapter adapter = new ProcedureUserAdapter(this, procedures);
             listView.Adapter = adapter;
+            HandleEvents();
+        }
+
+        private void HandleEvents()
+        {
+            listView.ItemClick -= List_ItemClicked;
+            listView.ItemClick += List_ItemClicked;
+        }
+
+        private void List_ItemClicked(object s, AdapterView.ItemClickEventArgs e)
+        {
+            int ps = e.Position;
+            var clickedprocedure = procedures[ps];
+            if(clickedprocedure.isExpanded)
+            clickedprocedure.isExpanded = false;
+            else clickedprocedure.isExpanded = true;
+
+            ProcedureUserAdapter adapter = new ProcedureUserAdapter(this, procedures);
+            listView.Adapter = adapter;
         }
 
         private void FindViews()
@@ -47,15 +66,18 @@ namespace Medici
             foreach (var item in proceduresUser)
             {
                 string temp = GetPacientName(item.id_user);
-                procedures.Add(new ProcedureModel() { name = temp, date = item.prog_name, hour = item.hour });
+                procedures.Add(new ProcedureModel() { name = temp,isExpanded=false, date = item.prog_name, hour = item.hour,coment=item.comments});
             }
 
-            //Services.LoggedUser.name
         }
         private string GetPacientName(string id)
         {
-            string dctname = Services.AllUserList.Where(itm => itm.id.ToString() == id).Select(itm => itm.name + " " + itm.surname).ToList().FirstOrDefault();
-            return dctname;
+            var usrname = Services.AllUserList.Where(itm => itm.id.ToString() == id).FirstOrDefault();
+            if (usrname == null)
+            {
+                return "";
+            }
+            return usrname.name+" "+usrname.surname;
         }
 
 
