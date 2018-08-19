@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -13,7 +14,7 @@ using Medici.Repository;
 
 namespace Medici
 {
-    [Activity(Label = "UserOrMed", Theme = "@style/AppTheme.NoActionBar", MainLauncher =true)]
+    [Activity(Label = "UserOrMed")]
     public class UserOrMed : Activity
     {
         private TextView User;
@@ -49,9 +50,8 @@ namespace Medici
         {
             User = FindViewById<TextView>(Resource.Id.user_Button);
             Doctor = FindViewById<TextView>(Resource.Id.doctor_Button);
-
-            // Create your application here
-
+            User.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            Doctor.SetBackgroundResource(Resource.Drawable.rounded_corner);
 
         }
     }

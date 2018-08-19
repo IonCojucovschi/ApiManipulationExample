@@ -42,6 +42,9 @@ namespace Medici
             AddNewProcedure = FindViewById<TextView>(Resource.Id.add_new_procedure);
             newProcedure = FindViewById<EditText>(Resource.Id.create_procedure);
             AddProcedureToUser = FindViewById<TextView>(Resource.Id.add_procedure);
+
+            AddNewProcedure.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            AddProcedureToUser.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
         private void HandleEvents()
         {

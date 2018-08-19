@@ -49,6 +49,8 @@ namespace Medici
         {
             registerText.Click -= Redister_Doc;
             registerText.Click += Redister_Doc;
+
+            registerText.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
         private void Redister_Doc(object s, EventArgs e)
         {

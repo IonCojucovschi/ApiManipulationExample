@@ -39,10 +39,10 @@ namespace Medici
             Programation = FindViewById<TextView>(Resource.Id.programation_view);
             CreateProgramation = FindViewById<TextView>(Resource.Id.clear_data);
 
-
-
+            Doctors.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            Programation.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            CreateProgramation.SetBackgroundResource(Resource.Drawable.rounded_corner);
             HelloContent.Text = "Hello, " + Services.LoggedUser.name + " !";
-
         }
         private void HandleViews()
         {

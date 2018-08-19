@@ -61,7 +61,11 @@ namespace Medici
             hourSpin = FindViewById<Spinner>(Resource.Id.hour_spinner);
             selectDate = FindViewById<TextView>(Resource.Id.select_date);
             createProgramation = FindViewById<TextView>(Resource.Id.create_programation);
+
+            createProgramation.SetBackgroundResource(Resource.Drawable.rounded_corner);
             Toast.MakeText(this, "Select Programation Date", ToastLength.Short).Show();
+
+
         }
         private void AddSpinerContent()
         {

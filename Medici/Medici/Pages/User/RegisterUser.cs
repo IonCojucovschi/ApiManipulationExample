@@ -43,6 +43,7 @@ namespace Medici
             surname = FindViewById<EditText>(Resource.Id.user_surname);
             phone = FindViewById<EditText>(Resource.Id.user_phone);
             register = FindViewById<TextView>(Resource.Id.register_user);
+            register.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
         private void HandleEvents()
         {

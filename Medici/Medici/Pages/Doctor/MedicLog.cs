@@ -38,6 +38,8 @@ namespace Medici
             Register = FindViewById<TextView>(Resource.Id.register);
             LoginText = FindViewById<EditText>(Resource.Id.login_content);
             PaswordText = FindViewById<EditText>(Resource.Id.pass_content);
+
+            LogIn.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
         private void HandleEvents()
         {

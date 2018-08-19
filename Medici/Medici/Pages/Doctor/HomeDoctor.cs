@@ -39,6 +39,10 @@ namespace Medici
             DoctorView = FindViewById<TextView>(Resource.Id.doctor_view);
             ProgramationView = FindViewById<TextView>(Resource.Id.programation_view);
             AddProcedure = FindViewById<TextView>(Resource.Id.add_procedure);
+
+            DoctorView.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            ProgramationView.SetBackgroundResource(Resource.Drawable.rounded_corner);
+            AddProcedure.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
         private void HandeEvents()
         {
