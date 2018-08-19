@@ -39,9 +39,9 @@ namespace Medici
         private void FindViews()
         {
             ProcedureVuew = FindViewById<Spinner>(Resource.Id.existing_procedure);
-            AddNewProcedure = FindViewById<TextView>(Resource.Id.add_procedure);
+            AddNewProcedure = FindViewById<TextView>(Resource.Id.add_new_procedure);
             newProcedure = FindViewById<EditText>(Resource.Id.create_procedure);
-            AddProcedureToUser = FindViewById<TextView>(Resource.Id.add_new_procedure);
+            AddProcedureToUser = FindViewById<TextView>(Resource.Id.add_procedure);
         }
         private void HandleEvents()
         {
@@ -82,9 +82,10 @@ namespace Medici
             }
             else
             {
-                Toast.MakeText(this,"No procedure selected!!!",ToastLength.Short);
+                Toast.MakeText(this,"No procedure selected!!!",ToastLength.Short).Show();
             }
         }
+
         private void AddNewProcedureClicked(object s,EventArgs e)
         {
             if (newProcedure.Text != null | newProcedure.Text != "")
@@ -98,17 +99,17 @@ namespace Medici
                         InitializeSpinerContent();
                         Toast.MakeText(this, newProcedure.Text+ " is added.", ToastLength.Long);
                     }
-                    else Toast.MakeText(this, "No internet connection!!!", ToastLength.Short);
+                    else Toast.MakeText(this, "No internet connection!!!", ToastLength.Short).Show();
                 }
                 else
                 {
-                    Toast.MakeText(this, "This procedure exist!!!", ToastLength.Short);
+                    Toast.MakeText(this, "This procedure exist!!!", ToastLength.Short).Show();
 
                 }
             }
             else
             {
-                Toast.MakeText(this, "Imput is naked!", ToastLength.Short);
+                Toast.MakeText(this, "Imput is naked!", ToastLength.Short).Show();
             }
         }
     }
