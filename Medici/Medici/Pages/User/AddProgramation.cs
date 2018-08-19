@@ -31,7 +31,7 @@ namespace Medici
         Programare programareaCurenta;
         Doctor selectedDoctor;
         AvailableDay selectedDay;
-        bool isDayRegistred = false;
+        bool isDayValid = false;
         /// asdfasdf
         List<AvailableDay> avaylableDays;
         const int DATE_DIALOG = 1;
@@ -137,31 +137,46 @@ namespace Medici
                 AvailableDay day = Services.AllAvailableDayLilst.Where(itm => itm.dayname == programareaCurenta.prog_name & itm.doctor_id == selectedDoctor.id.ToString()).FirstOrDefault();
                 if (day == null)
                 {
-                    Services.RegisterProgramation(programareaCurenta);
-                    AvailableDay dday = new AvailableDay()
+                    if (isDayValid)
                     {
-                        dayname = programareaCurenta.prog_name,
-                        work_hours = 1,
-                        hours_list = programareaCurenta.hour + ",",
-                        doctor_id = selectedDoctor.id.ToString()
-                    };
-                    Services.RegisterDayAvailability(dday);
-                    this.OnBackPressed();
-                }
-                else
-                {
-                    if (selectedDay.hours_list.Split(',').Length < 9)
-                    {
-                        selectedDay.hours_list += programareaCurenta.hour + ",";
-                        selectedDay.work_hours++;
-                        Services.UpdateDayAvailability(selectedDay);
                         Services.RegisterProgramation(programareaCurenta);
-                        //this.GoPage(typeof(HomeUser));
+                        AvailableDay dday = new AvailableDay()
+                        {
+                            dayname = programareaCurenta.prog_name,
+                            work_hours = 1,
+                            hours_list = programareaCurenta.hour + ",",
+                            doctor_id = selectedDoctor.id.ToString()
+                        };
+                        Services.RegisterDayAvailability(dday);
                         this.OnBackPressed();
                     }
                     else
                     {
-                        Toast.MakeText(this, "This day is busy", ToastLength.Short).Show();
+                        Toast.MakeText(this, "This date is not valable!", ToastLength.Short).Show();
+                    }
+                }
+                else
+                {
+                    if (isDayValid)
+                    {
+                        if (selectedDay.hours_list.Split(',').Length < 9)
+                        {
+                            selectedDay.hours_list += programareaCurenta.hour + ",";
+                            selectedDay.work_hours++;
+                            Services.UpdateDayAvailability(selectedDay);
+                            Services.RegisterProgramation(programareaCurenta);
+                            //this.GoPage(typeof(HomeUser));
+                            this.OnBackPressed();
+                        }
+                        else
+                        {
+                            Toast.MakeText(this, "This day is busy", ToastLength.Short).Show();
+                        }
+
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "This date is not valid!", ToastLength.Short).Show();
                     }
                 }
             }
@@ -198,6 +213,12 @@ namespace Medici
             this.year = _year;
             this.month = _month + 1;
             this.day = _day;
+            DateTime selected =new  DateTime(this.year,this.month,this.day);
+            DateTime curent = new DateTime(DateTime.Today.Year,DateTime.Today.Month,DateTime.Today.Day);
+
+            if (DateTime.Compare(selected, curent) > 0) isDayValid = true;
+            else isDayValid = false;
+
             programareaCurenta.prog_name = day + "" + month + "" + year;
             avaylableDays = Services.GetAvailableDay();
             selectDate.Text = "Selected date: " + day + "/" + month + "/" + year;

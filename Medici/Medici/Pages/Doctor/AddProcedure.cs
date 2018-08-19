@@ -79,6 +79,8 @@ namespace Medici
             if (SelectedProcedure != null)
             {
                 Services.RegisterDocProcedureRelation(SelectedProcedure.id, Services.LoggedDoctor.id);
+                InitializeSpinerContent();
+                Toast.MakeText(this, SelectedProcedure.name+" is added!", ToastLength.Short).Show();
             }
             else
             {
@@ -91,13 +93,14 @@ namespace Medici
             if (newProcedure.Text != null | newProcedure.Text != "")
             {
                 var thisProc = Services.GetAllProcedure().Where(itm=>itm.name==newProcedure.Text).FirstOrDefault();
-                if (thisProc != null)
+                if (thisProc == null)
                 {
                     if (InternetConnection.IsNetConnected())
                     {
                         Services.RegisterProcedure(newProcedure.Text);
                         InitializeSpinerContent();
-                        Toast.MakeText(this, newProcedure.Text+ " is added.", ToastLength.Long);
+                        newProcedure.Text = "";
+                        Toast.MakeText(this, newProcedure.Text+ " is added.", ToastLength.Long).Show();
                     }
                     else Toast.MakeText(this, "No internet connection!!!", ToastLength.Short).Show();
                 }
