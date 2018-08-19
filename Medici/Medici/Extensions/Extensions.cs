@@ -11,6 +11,7 @@ namespace Medici.Extensions
             var intent = new Intent();
             intent.SetClass(activity, name);
             activity.StartActivity(intent);
+            activity.OverridePendingTransition(Resource.Animation.side_in_right,Resource.Animation.side_out_left);
         }
         public static string DateFormatter(this string date)
         {
