@@ -74,16 +74,22 @@ namespace Medici
 			public const int design_snackbar_out = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public const int side_in_right = 2131034126;
+			public const int side_in_left = 2131034126;
 			
 			// aapt resource value: 0x7f05000f
-			public const int side_out_left = 2131034127;
+			public const int side_in_right = 2131034127;
 			
 			// aapt resource value: 0x7f050010
-			public const int tooltip_enter = 2131034128;
+			public const int side_out_left = 2131034128;
 			
 			// aapt resource value: 0x7f050011
-			public const int tooltip_exit = 2131034129;
+			public const int side_out_right = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int tooltip_enter = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int tooltip_exit = 2131034131;
 			
 			static Animation()
 			{

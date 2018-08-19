@@ -15,7 +15,7 @@ using Medici.Models;
 namespace Medici
 {
     [Activity(Label = "RegisterUser")]
-    public class RegisterUser : Activity
+    public class RegisterUser : BasePage
     {
         private EditText login;
         private EditText password;

@@ -61,6 +61,7 @@
     <Compile Include="Models\Procedura.cs" />
     <Compile Include="Models\Programare.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\Doctor\AddProcedure.cs" />
     <Compile Include="Pages\Splash.cs" />
     <Compile Include="Pages\User\DoctorsListView.cs" />
@@ -173,7 +174,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rounded_corner.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\side_in_left.xml" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash.xml" />
   </ItemGroup>
@@ -185,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Anim\side_out_left.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\side_out_right.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

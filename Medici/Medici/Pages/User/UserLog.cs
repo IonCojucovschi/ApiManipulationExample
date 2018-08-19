@@ -16,7 +16,7 @@ using Medici.Extensions;
 namespace Medici
 {
     [Activity(Label = "UserLog", Theme = "@style/AppTheme.NoActionBar")]
-    public class UserLog : Activity
+    public class UserLog : BasePage
     {
         public TextView LogIn;
         public TextView Register;
@@ -34,6 +34,10 @@ namespace Medici
             EventHanedlers();
         }
 
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+        }
 
         public void EventHanedlers()
         {

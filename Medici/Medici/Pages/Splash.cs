@@ -22,5 +22,11 @@ namespace Medici
             this.GoPage(typeof(UserOrMed));
             // Create your application here
         }
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+            this.GoPage(typeof(UserOrMed));
+        }
+
     }
 }

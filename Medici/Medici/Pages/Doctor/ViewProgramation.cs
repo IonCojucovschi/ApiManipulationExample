@@ -13,7 +13,7 @@ using Android.Widget;
 namespace Medici
 {
     [Activity(Label = "ViewProgramation")]
-    public class ViewProgramation : Activity
+    public class ViewProgramation : BasePage
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

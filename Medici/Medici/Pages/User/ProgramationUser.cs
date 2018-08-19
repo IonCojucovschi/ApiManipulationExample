@@ -19,7 +19,7 @@ using Medici.Adapters;
 namespace Medici
 {
     [Activity(Label = "ProgramationUser")]
-    public class ProgramationUser : Activity
+    public class ProgramationUser : BasePage
     {
         ListView listView;
         List<ProcedureModel> procedures = new List<ProcedureModel>();

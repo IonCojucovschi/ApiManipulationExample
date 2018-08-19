@@ -16,7 +16,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "HomeUser")]
-    public class HomeUser : Activity
+    public class HomeUser : BasePage
     {
 
         TextView HelloContent;
@@ -65,6 +65,11 @@ namespace Medici
         void Programation_Click(object sender, EventArgs e)
         {
             this.GoPage(typeof(ProgramationUser));
+        }
+
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
         }
 
     }

@@ -10,12 +10,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Medici.Extensions;
 using Medici.Repository;
 
 namespace Medici
 {
     [Activity(Label = "UserOrMed")]
-    public class UserOrMed : Activity
+    public class UserOrMed : BasePage
     {
         private TextView User;
         private TextView Doctor;
@@ -31,20 +32,18 @@ namespace Medici
 
             User.Click += (S, e) =>
             {
-                var intent = new Intent();
-                intent.PutExtra("user_type","user");
-                intent.SetClass(this,typeof(UserLog));
-                StartActivity(intent);
+                this.GoPage(typeof(UserLog));
             };
 
             Doctor.Click += (S, e) =>
             {
-                var intent = new Intent();
-                intent.PutExtra("user_type", "user");
-                intent.SetClass(this, typeof(MedicLog));
-                StartActivity(intent);
+                this.GoPage( typeof(MedicLog));
             };
 
+        }
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
         }
         private void FindViews()
         {
