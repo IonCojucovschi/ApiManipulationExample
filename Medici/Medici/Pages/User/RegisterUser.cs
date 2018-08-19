@@ -69,6 +69,10 @@ namespace Medici
                 }
 
             }
+            else
+            {
+                Toast.MakeText(this, "Complete all fields", ToastLength.Short).Show();
+            }
         }
     }
 }

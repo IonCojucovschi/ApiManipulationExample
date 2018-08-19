@@ -15,7 +15,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "AddProcedure")]
-    public class AddProcedure : Activity
+    public class AddProcedure : BasePage
     {
         Spinner ProcedureVuew;
         TextView AddProcedureToUser;

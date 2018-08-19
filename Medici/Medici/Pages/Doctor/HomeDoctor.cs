@@ -16,7 +16,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "HomeDoctor")]
-    public class HomeDoctor : Activity
+    public class HomeDoctor : BasePage
     {
         TextView DoctorView;
         TextView ProgramationView;

@@ -18,7 +18,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "ProgramationDoctor")]
-    public class ProgramationDoctor : Activity
+    public class ProgramationDoctor : BasePage
     {
         ListView listView;
         List<ProcedureModel> procedures = new List<ProcedureModel>();

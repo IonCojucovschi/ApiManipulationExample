@@ -15,7 +15,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "MedicLog", Theme = "@style/AppTheme.NoActionBar")]
-    public class MedicLog : Activity
+    public class MedicLog : BasePage
     {
         public TextView LogIn;
         public TextView Register;

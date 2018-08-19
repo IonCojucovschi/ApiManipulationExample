@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#513351"
+    android:background="#fff"
     android:layout_height="match_parent"
     android:weightSum="100">
     <Space
@@ -10,6 +10,9 @@
         android:layout_width="match_parent"
         android:layout_weight="20" />
     <LinearLayout
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:layout_width="match_parent"
@@ -27,6 +30,9 @@
             android:text="" />
     </LinearLayout>
     <LinearLayout
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:layout_width="match_parent"
@@ -35,7 +41,7 @@
             android:layout_margin="15dp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Pasw" />
+            android:text="Password" />
         <EditText
             android:id="@+id/pass_content"
             android:layout_margin="15dp"
@@ -49,14 +55,14 @@
         android:layout_width="match_parent"
         android:layout_weight="5" />
     <TextView
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
         android:id="@+id/sign_in"
         android:layout_height="0dp"
         android:layout_weight="10"
         android:layout_margin="10dp"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:text="Sign In"
-        android:background="#cdcdcd" />
+        android:text="Sign In" />
     <Space
         android:layout_height="0dp"
         android:layout_width="match_parent"
@@ -65,6 +71,7 @@
         android:id="@+id/register"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:text="Register?" />
     <Space

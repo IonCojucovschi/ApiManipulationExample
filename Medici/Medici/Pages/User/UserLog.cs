@@ -45,7 +45,7 @@ namespace Medici
             LogIn.Click += Login_Licked;
             Register.Click -= Register_Click;
             Register.Click += Register_Click;
-
+            LogIn.SetBackgroundResource(Resource.Drawable.rounded_corner);
         }
 
         private void Register_Click(object s, EventArgs e)

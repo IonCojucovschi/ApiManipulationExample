@@ -16,7 +16,7 @@ using Medici.Repository;
 namespace Medici
 {
     [Activity(Label = "RegisterDoctor")]
-    public class RegisterDoctor : Activity
+    public class RegisterDoctor : BasePage
     {
         private EditText login;
         private EditText password;

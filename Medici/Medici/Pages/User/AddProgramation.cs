@@ -18,7 +18,7 @@ using Medici.Extensions;
 namespace Medici
 {
     [Activity(Label = "AddProgramation")]
-    public class AddProgramation : Activity, IOnDateSetListener
+    public class AddProgramation : BasePage, IOnDateSetListener
     {
         Spinner doctorsSpin;
         Spinner procedureSpin;
