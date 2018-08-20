@@ -71,17 +71,18 @@ namespace Medici.Repository
             string responseJsonString = null;
             using (var httpClient = new WebClient())
             {
-                try
-                {
-                    string url = UrlConstant.BaseUrl + UrlConstant.GetAllProcedure;
-                    responseJsonString = httpClient.DownloadString(url);
-                    var data = new DeserializeData<ResponseData<Procedura>>(responseJsonString);
-                    procedures = data.DeserializedObject.data;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                string url = UrlConstant.BaseUrl + UrlConstant.GetAllProcedure;
+                responseJsonString = httpClient.DownloadString(url);
+                var data = new DeserializeData<ResponseData<Procedura>>(responseJsonString);
+                procedures = data.DeserializedObject.data;
+                //try
+                //{
+
+                //}
+                //catch (Exception)
+                //{
+                //    throw;
+                //}
             }
 
             return procedures;

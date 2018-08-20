@@ -16,8 +16,9 @@ namespace Medici
     public class BasePage : Activity
     {
         public override void OnBackPressed()
-        {            
+        {
             base.OnBackPressed();
+            Finish();
             this.OverridePendingTransition(Resource.Animation.side_out_right, Resource.Animation.side_in_left);
         }
     }
