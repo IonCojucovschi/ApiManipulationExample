@@ -96,6 +96,7 @@ namespace Medici
             selectedDoctor = Services.AllDoctorsList.Where(itm => itm.name == selectedDct[0] & itm.surname == selectedDct[1]).FirstOrDefault();
             programareaCurenta.id_doctor = selectedDoctor.id.ToString();
             avaylableDays = Services.GetAvailableDay();
+            Services.GetAllProcedureDocrelation();
 
             var relationProcDoc = Services.AllProcedureDocRelationsList.Where(itm => itm.doc_id == selectedDoctor.id).Select(itm => itm.proc_id);
             var docProcedures = Services.GetAllProcedure().Where(item => relationProcDoc.Contains(item.id));
