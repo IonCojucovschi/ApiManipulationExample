@@ -43,7 +43,7 @@ namespace Medici.Repository
                 }
                 catch (Exception)
                 {
-                    throw;
+                    ///  throw;
                 }
             }
             return doctors;
@@ -73,7 +73,8 @@ namespace Medici.Repository
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetAllProcedure);
+                    string url = UrlConstant.BaseUrl + UrlConstant.GetAllProcedure;
+                    responseJsonString = httpClient.DownloadString(url);
                     var data = new DeserializeData<ResponseData<Procedura>>(responseJsonString);
                     procedures = data.DeserializedObject.data;
                 }
@@ -168,7 +169,8 @@ namespace Medici.Repository
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.GetDoctorById + login + '.' + password);
+                    string url = UrlConstant.BaseUrl + UrlConstant.GetDoctorById + login + '.' + password;
+                    responseJsonString = httpClient.DownloadString(url);
                     var data = new DeserializeData<ResponseData<Doctor>>(responseJsonString);
                     loggedDoctor = data.DeserializedObject.data;
                 }
@@ -229,8 +231,9 @@ namespace Medici.Repository
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterUser + user.login + '.' +
-                        user.pasword + '.' + user.name + '.' + user.surname + '.' + user.cellphone);
+                    string url = UrlConstant.BaseUrl + UrlConstant.RegisterUser + user.login + '.' +
+                                            user.pasword + '.' + user.name + '.' + user.surname + '.' + user.cellphone;
+                    responseJsonString = httpClient.DownloadString(url);
                 }
                 catch (Exception)
                 {
@@ -281,13 +284,14 @@ namespace Medici.Repository
             {
                 try
                 {
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProgramation +
+                    string url = UrlConstant.BaseUrl + UrlConstant.RegisterProgramation +
                                                                     programare.id_doctor + '.' +
                                                                     programare.id_user + '.' +
                                                                     programare.prog_name + '.' +
                                                                     programare.hour + '.' +
                                                                     programare.comments + '.' +
-                                                                    programare.id_procedure);
+                                          programare.id_procedure;
+                    responseJsonString = httpClient.DownloadString(url);
                 }
                 catch (Exception)
                 {
@@ -297,16 +301,16 @@ namespace Medici.Repository
             }
         }
 
-        public void REgisterDoc_ProcedRelation(int proc_id,int doc_id)
+        public void REgisterDoc_ProcedRelation(int proc_id, int doc_id)
         {
-            
-                 string responseJsonString = null;
+
+            string responseJsonString = null;
             using (var httpClient = new WebClient())
             {
                 try
                 {
                     //proc_id.doc_id
-                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProcedureDocRelation+proc_id+'.'+doc_id);
+                    responseJsonString = httpClient.DownloadString(UrlConstant.BaseUrl + UrlConstant.RegisterProcedureDocRelation + proc_id + '.' + doc_id);
                 }
                 catch (Exception)
                 {

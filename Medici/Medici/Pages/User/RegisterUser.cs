@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Medici.Repository;
 using Medici.Models;
+using Medici.Extensions;
 
 namespace Medici
 {
@@ -59,9 +60,7 @@ namespace Medici
                 if (InternetConnection.IsNetConnected())
                 {
                     Services.RegisterUser(newuser);
-                    var intent = new Intent();
-                    intent.SetClass(this, typeof(UserLog));
-                    StartActivity(intent);
+                    this.GoPage(typeof(UserLog));
                 }
                 else
                 {

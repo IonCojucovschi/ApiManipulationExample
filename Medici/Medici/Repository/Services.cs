@@ -101,7 +101,7 @@ namespace Medici.Repository
             _resources.RegisterDayAvailability(day);
         }
 
-        public static void RegisterDocProcedureRelation(int proc_id,int doc_id)
+        public static void RegisterDocProcedureRelation(int proc_id, int doc_id)
         {
             _resources.REgisterDoc_ProcedRelation(proc_id, doc_id);
         }

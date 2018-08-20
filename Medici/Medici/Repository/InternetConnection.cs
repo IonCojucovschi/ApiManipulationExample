@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content;
 using Android.Net;
+using Plugin.Connectivity;
 
 namespace Medici.Repository
 {
@@ -11,14 +12,12 @@ namespace Medici.Repository
 
         static InternetConnection()
         {
-            connectivityManager = (ConnectivityManager)Application.Context.GetSystemService(
-                Context.ConnectivityService);
+
         }
 
         public static bool IsNetConnected()
         {
-            NetworkInfo networkInfo = connectivityManager.ActiveNetworkInfo;
-            bool isOnline = networkInfo.IsConnected;
+            bool isOnline = CrossConnectivity.Current.IsConnected;
             return isOnline;
         }
     }
