@@ -1,36 +1,34 @@
 ﻿<Properties StartupConfiguration="{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Medici/Pages/User/ProgramationUser.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Medici/Pages/User/AddProgramation.cs" Line="222" Column="16" />
-      <File FileName="Medici/Repository/Services.cs" Line="45" Column="40" />
-      <File FileName="Medici/Pages/User/UserLog.cs" Line="58" Column="1" />
+      <File FileName="Medici/Pages/User/RegisterUser.cs" Line="75" Column="1" />
+      <File FileName="Medici/Pages/User/AddProgramation.cs" Line="105" Column="1" />
+      <File FileName="Medici/Repository/Services.cs" Line="22" Column="8" />
+      <File FileName="Medici/Pages/User/UserLog.cs" Line="62" Column="33" />
       <File FileName="Medici/Extensions/Extensions.cs" Line="9" Column="28" />
       <File FileName="Medici/Models/User.cs" Line="16" Column="1" />
       <File FileName="Medici/Pages/User/HomeUser.cs" Line="43" Column="77" />
       <File FileName="Medici/Pages/Doctor/HomeDoctor.cs" Line="21" Column="1" />
-      <File FileName="Medici/Pages/Doctor/MedicLog.cs" Line="55" Column="1" />
-      <File FileName="Medici/Repository/ManagerContent.cs" Line="120" Column="1" />
-      <File FileName="Medici/Helpers/UrlConstant.cs" Line="28" Column="30" />
-      <File FileName="Medici/Models/AvailableDay.cs" Line="19" Column="20" />
-      <File FileName="Medici/Models/RelationProcedureDoctor.cs" Line="4" Column="41" />
-      <File FileName="Medici/Pages/User/ProgramationUser.cs" Line="40" Column="97" />
-      <File FileName="Medici/Pages/Doctor/ProgramationDoctor.cs" Line="28" Column="33" />
-      <File FileName="Medici/Adapters/ProcedureUserAdapter.cs" Line="28" Column="9" />
-      <File FileName="Medici/Models/AdapterHelpers/ProcedureModel.cs" Line="4" Column="32" />
-      <File FileName="Medici/Models/Entity.cs" Line="17" Column="20" />
-      <File FileName="Medici/Models/Programare.cs" Line="18" Column="23" />
+      <File FileName="Medici/Repository/ManagerContent.cs" Line="79" Column="17" />
+      <File FileName="Medici/Helpers/UrlConstant.cs" Line="17" Column="30" />
+      <File FileName="Medici/Repository/InternetConnection.cs" Line="21" Column="1" />
+      <File FileName="Medici/Pages/Doctor/MedicLog.cs" Line="65" Column="1" />
+      <File FileName="Source Not Available" />
+      <File FileName="Medici/Pages/BasePage.cs" Line="21" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/UserLog.cs" relfile="Medici/Pages/UserLog.cs" line="48" column="47" />
       <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/User/AddProgramation.cs" relfile="Medici/Pages/User/AddProgramation.cs" line="158" column="1" />
-      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Repository/Services.cs" relfile="Medici/Repository/Services.cs" line="18" column="1" />
-      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/User/AddProgramation.cs" relfile="Medici/Pages/User/AddProgramation.cs" line="105" column="1" />
+      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Repository/ManagerContent.cs" relfile="Medici/Repository/ManagerContent.cs" line="230" column="1" />
+      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/User/RegisterUser.cs" relfile="Medici/Pages/User/RegisterUser.cs" line="62" column="34" />
+      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Pages/User/RegisterUser.cs" relfile="Medici/Pages/User/RegisterUser.cs" line="60" column="1" />
+      <Breakpoint file="/Users/bss/Documents/INProj/ApiTest/Medici/Medici/Repository/ManagerContent.cs" relfile="Medici/Repository/ManagerContent.cs" line="235" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Medici AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" AndroidDesignerPreferredTheme="AppTheme" />
+  <MonoDevelop.Ide.ItemProperties.Medici AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" AndroidDesignerPreferredTheme="AppTheme" />
 </Properties>
